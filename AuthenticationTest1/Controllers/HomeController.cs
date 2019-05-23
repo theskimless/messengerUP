@@ -28,6 +28,7 @@ namespace AuthenticationTest1.Controllers
             _fileWriter = fileWriter;
         }
 
+        //LOAD AUDIO
         [Authorize(PermissionItem.User, PermissionAction.Access)]
         public string LoadAudio(IFormFile data, string fname)
         {
@@ -47,6 +48,7 @@ namespace AuthenticationTest1.Controllers
             return "";
         }
 
+        //LOAD FILE
         [Authorize(PermissionItem.User, PermissionAction.Access)]
         public string LoadFile(IFormFile chat_formfile)
         {
@@ -65,6 +67,7 @@ namespace AuthenticationTest1.Controllers
             return "";
         }
 
+        //INDEX
         [Authorize(PermissionItem.User, PermissionAction.Access)]
         public IActionResult Index()
         {
@@ -82,6 +85,7 @@ namespace AuthenticationTest1.Controllers
             return View();
         }
 
+        //DELETE GROUP
         [Authorize(PermissionItem.User, PermissionAction.Access)]
         [HttpGet]
         public IActionResult DeleteGroup(int id)
@@ -100,11 +104,13 @@ namespace AuthenticationTest1.Controllers
             return RedirectToAction("Index");
         }
 
+        //FIND USER
         [Authorize(PermissionItem.User, PermissionAction.Access)]
         [HttpGet]
         public string FindUser(int groupType, string name)
         {
             List<UserViewModel> users = new List<UserViewModel>();
+            //IF CHAT
             if(groupType == 0)
             {
                 var user = dbContext.Users.FirstOrDefault(p => p.Login == name || p.Email == name);
@@ -130,6 +136,7 @@ namespace AuthenticationTest1.Controllers
             return "";
         }
 
+        //CREATE GROUP
         [Authorize(PermissionItem.User, PermissionAction.Access)]
         [HttpGet]
         public IActionResult CreateGroup()
@@ -140,12 +147,14 @@ namespace AuthenticationTest1.Controllers
             return View();
         }
 
+        //CREATE GROUP
         [Authorize(PermissionItem.User, PermissionAction.Access)]
         [HttpPost]
         public IActionResult CreateGroup(string name, IFormFile file, string def_avatar, string users, int group_type)
         {
             User user = null;
 
+            //IF GROUP
             if (group_type == 1)
             {
                 if ((name == null || name.Length < 1))
@@ -157,6 +166,7 @@ namespace AuthenticationTest1.Controllers
                 if (file == null && def_avatar == null)
                     ModelState.AddModelError("", "Выберите картинку");
             }
+            //IF CHAT
             else if(group_type == 0)
             {
                 if (users == null)
@@ -218,11 +228,6 @@ namespace AuthenticationTest1.Controllers
 
             dbContext.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

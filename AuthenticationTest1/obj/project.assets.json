@@ -13009,11 +13009,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vitaliy\\source\\repos\\AuthenticationTest1\\AuthenticationTest1\\AuthenticationTest1.csproj",
+      "projectUniqueName": "C:\\Users\\Vitaliy\\source\\repos\\MessengerU\\AuthenticationTest1\\AuthenticationTest1.csproj",
       "projectName": "AuthenticationTest1",
-      "projectPath": "C:\\Users\\Vitaliy\\source\\repos\\AuthenticationTest1\\AuthenticationTest1\\AuthenticationTest1.csproj",
+      "projectPath": "C:\\Users\\Vitaliy\\source\\repos\\MessengerU\\AuthenticationTest1\\AuthenticationTest1.csproj",
       "packagesPath": "C:\\Users\\Vitaliy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vitaliy\\source\\repos\\AuthenticationTest1\\AuthenticationTest1\\obj\\",
+      "outputPath": "C:\\Users\\Vitaliy\\source\\repos\\MessengerU\\AuthenticationTest1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
