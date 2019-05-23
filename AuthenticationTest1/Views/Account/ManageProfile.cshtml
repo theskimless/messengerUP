@@ -1,0 +1,64 @@
+﻿@using AuthenticationTest1.ViewModels
+@model UserViewModel
+
+<div class="p-wrap">
+    <div class="p-title">Профиль</div>
+    <div class="p-form">
+        <form method="post" enctype="multipart/form-data">
+            @if (Model != null)
+            {
+                <div class="p-form-inp-title text-center">Логин</div>
+                <div class="mp-user-tc">@Model.Login</div>
+
+                <div class="p-form-inp-title text-center">Email</div>
+                <div class="mp-user-tc">@Model.Email</div>
+
+                <div class="p-form-inp-title text-center">Аватар</div>
+                <div class="mp-user-avatar">
+                    <img src="~/db_files/@Model.Avatar" alt="Avatar" />
+                </div>
+            }
+
+            <div class="p-form-inp-title text-center">Изменить аватар</div>
+            <label class="cg-input-file-label">
+                <input id="cg-input-file" type="file" name="file" value="" />
+                <svg width="50" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                    <g>
+                        <path d="m60.4,58.2c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-21.7,21.7c-3.7,3.7-5.7,8.5-5.7,13.7 0,5.2 2,10 5.7,13.7 7.6,7.6 19.9,7.6 27.4,0l49-49c5.1-5.1 7.9-11.9 7.9-19.1s-2.8-14-7.9-19.1c-10.6-10.6-27.7-10.6-38.3,0l-48.9,48.9c-6.6,6.6-10.2,15.3-10.2,24.6 0,9.3 3.6,18.1 10.2,24.6 6.6,6.6 15.3,10.2 24.6,10.2 9.3,0 18.1-3.6 24.6-10.2l21.7-21.7c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-21.7,21.7c-5,5-11.7,7.8-18.8,7.8s-13.8-2.8-18.8-7.8-7.8-11.7-7.8-18.8 2.8-13.8 7.8-18.8l48.9-48.9c3.6-3.6 8.3-5.5 13.3-5.5 5,0 9.8,2 13.3,5.5 3.6,3.6 5.5,8.3 5.5,13.3s-2,9.8-5.5,13.3l-49,49c-4.3,4.3-11.4,4.3-15.8,0-2.1-2.1-3.3-4.9-3.3-7.9 0-3 1.2-5.8 3.3-7.9l21.8-21.7z" />
+                    </g>
+                </svg>
+            </label>
+            <div class="cg-ss-m">или воспользуйтесь встроенными</div>
+            <div class="d-flex flex-wrap justify-content-center">
+                <div class="cg-smile mprofile-avatar" fname="001-amazing.svg"><img src="~/db_files/001-amazing.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="002-angry.svg"><img src="~/db_files/002-angry.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="003-blush.svg"><img src="~/db_files/003-blush.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="004-bored.svg"><img src="~/db_files/004-bored.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="005-cool.svg"><img src="~/db_files/005-cool.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="006-crazy.svg"><img src="~/db_files/006-crazy.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="007-crying.svg"><img src="~/db_files/007-crying.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="008-cute.svg"><img src="~/db_files/008-cute.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="009-excited.svg"><img src="~/db_files/009-excited.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="010-happy.svg"><img src="~/db_files/010-happy.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="011-full.svg"><img src="~/db_files/011-full.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="012-laugh.svg"><img src="~/db_files/012-laugh.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="013-meh.svg"><img src="~/db_files/013-meh.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="014-muted.svg"><img src="~/db_files/014-muted.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="015-pain.svg"><img src="~/db_files/015-pain.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="016-relax.svg"><img src="~/db_files/016-relax.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="017-sad.svg"><img src="~/db_files/017-sad.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="018-sad-1"><img src="~/db_files/018-sad-1.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="019-sceptic.svg"><img src="~/db_files/019-sceptic.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="020-shocked.svg"><img src="~/db_files/020-shocked.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="021-shocked-1"><img src="~/db_files/021-shocked-1.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="022-smile.svg"><img src="~/db_files/022-smile.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="023-smile-1"><img src="~/db_files/023-smile-1.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="024-wink.svg"><img src="~/db_files/024-wink.svg" alt="Alternate Text" /></div>
+                <div class="cg-smile mprofile-avatar" fname="025-sleepy.svg"><img src="~/db_files/025-sleepy.svg" alt="Alternate Text" /></div>
+            </div>
+            <input id="def-avatar-inp" type="hidden" name="def_avatar" value="" />
+
+            <div class="p-form-submit"><button class="submit-btn" type="submit">Сохранить</button></div>
+        </form>
+    </div>
+</div>

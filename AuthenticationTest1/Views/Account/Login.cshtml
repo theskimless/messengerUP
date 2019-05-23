@@ -1,0 +1,27 @@
+﻿@using AuthenticationTest1.ViewModels;
+@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="p-wrap">
+    <div class="p-title">Вход</div>
+    <div class="p-form">
+        <form method="post">
+            <div class="validation text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="text-center text-danger">
+                <div><span asp-validation-for="Login"></span></div>
+                <div><span asp-validation-for="Password"></span></div>
+            </div>
+
+            <div class="p-form-inp-title">Логин или E-mail</div>
+            <div><input type="text" asp-for="Login" /></div>
+
+            <div class="p-form-inp-title">Пароль</div>
+            <div><input type="password" asp-for="Password" /></div>
+
+            <div class="p-form-submit"><button class="submit-btn" type="submit">Войти</button></div>
+            <div class="p-form-submit"><a asp-action="Register">Зарегистрироваться</a></div>
+        </form>
+    </div>
+</div>
